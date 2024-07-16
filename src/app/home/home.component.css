@@ -1,0 +1,28 @@
+section {
+  font-size: 18pt;
+}
+h1 {
+  /*this is the space or position of the text*/
+  @apply py-20;
+  /*this is for the text display*/
+  @apply font-extrabold tracking-widest text-7xl text-center;
+}
+p {
+  @apply w-8/12 mx-auto text-center;
+}
+h2 {
+  @apply mx-32 my-5;
+  @apply text-5xl font-bold tracking-widest text-center ;
+}
+ul {
+  @apply mx-48 px-10 my-10 py-5 list-disc;
+  @apply border-double border-4 border-green-600;
+}
+.intro {
+  @apply tracking-wide font-semibold text-start;
+}
+.angular {
+  /*@apply px-1;*/
+  /*background: linear-gradient(-225deg, rgba(231, 92, 253, 1) 30%, rgba(237, 7, 33, 1) 80%);*/
+}
+
