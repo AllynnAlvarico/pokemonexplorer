@@ -1,0 +1,12 @@
+h1 {
+  width: 200px;
+  @apply text-2xl font-bold mb-6;
+}
+nav {
+  width: 180px;
+  @apply flex flex-col justify-evenly gap-y-5;
+  @apply text-center font-light tracking-widest;
+}
+a:hover {
+  @apply font-bold;
+}

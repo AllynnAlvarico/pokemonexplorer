@@ -1,0 +1,13 @@
+.about {
+  @apply tracking-widest mt-9;
+}
+h1 {
+  @apply ml-72 text-5xl font-bold tracking-widest;
+}
+p {
+  @apply px-14 mt-10 leading-loose break-words text-lg font-sans font-light;
+}
+.date {
+  @apply italic font-extralight ml-96;
+}
+

@@ -1,0 +1,11 @@
+section {
+  @apply mt-14 mx-7;
+  @apply flex flex-col justify-evenly gap-y-5;
+  @apply  pb-5 text-center font-light tracking-widest;
+}
+a {
+  width: 180px;
+}
+a:hover {
+  @apply font-bold;
+}

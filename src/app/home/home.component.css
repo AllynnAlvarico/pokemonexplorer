@@ -1,4 +1,5 @@
 section {
+  overflow-x: hidden;
   font-size: 18pt;
 }
 h1 {
@@ -19,10 +20,22 @@ ul {
   @apply border-double border-4 border-green-600;
 }
 .intro {
-  @apply tracking-wide font-semibold text-start;
+  margin-top: -50px;
+  padding-bottom: 30px;
+  @apply tracking-wide font-semibold text-center w-9/12;
 }
-.angular {
-  /*@apply px-1;*/
-  /*background: linear-gradient(-225deg, rgba(231, 92, 253, 1) 30%, rgba(237, 7, 33, 1) 80%);*/
+.banner-message {
+  position: relative;
+  margin-top: -1000px;
+  margin-bottom: 450px;
+  @apply backdrop-blur bg-white/30 w-1/2 ml-5;
+  @apply animate-fadeinright;
 }
 
+.url {
+  position: relative;
+  width: 350px;
+  @apply backdrop-blur bg-black/50 text-white;
+  @apply -mt-20 mx-10 px-11 mb-10;
+  @apply animate-jiggle;
+}
