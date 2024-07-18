@@ -7,6 +7,10 @@ h1 {
   @apply py-20;
   /*this is for the text display*/
   @apply font-extrabold tracking-widest text-7xl text-center;
+
+  background: linear-gradient(45deg, blue, red);
+  background-clip: text;
+  color: transparent;
 }
 p {
   @apply w-8/12 mx-auto text-center;
@@ -28,8 +32,12 @@ ul {
   position: relative;
   margin-top: -1000px;
   margin-bottom: 450px;
-  @apply backdrop-blur bg-white/30 w-1/2 ml-5;
+  box-shadow: 20px 15px 20px rgba(0,0,0,0.3);
+  @apply backdrop-blur bg-transparent/5 w-1/2 ml-5 rounded-3xl saturate-150;
   @apply animate-fadeinright;
+}
+img {
+  @apply saturate-150;
 }
 
 .url {

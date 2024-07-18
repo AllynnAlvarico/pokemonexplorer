@@ -4,7 +4,8 @@ import {HomeComponent} from "./home/home.component";
 import {JournalComponent} from "./about/journal/journal.component";
 
 const routes: Routes = [
-  {path: 'home', component:HomeComponent},
+  {path: '', component: HomeComponent},
+  {path: 'home', component: HomeComponent},
   {path: 'journal', component: JournalComponent}
 ];
 
