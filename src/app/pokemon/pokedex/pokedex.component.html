@@ -1,3 +1,27 @@
-<section>
-  <app-card></app-card>
+<section class="flex flex-row justify-start">
+<!--  class="flex-row-even flex-wrap mx-auto"-->
+  <div class="flex-row-even flex-wrap gap-1">
+    <button (click)="getClick('gen1')">Generation 1</button>
+    <button (click)="getClick('gen2')">Generation 2</button>
+    <button (click)="getClick('gen3')">Generation 3</button>
+    <button (click)="getClick('gen4')">Generation 4</button>
+<!--    <button (click)="getClick('hisui')">Hisui</button>-->
+    <button (click)="getClick('gen5')">Generation 5</button>
+    <button (click)="getClick('gen6')">Generation 6</button>
+    <button (click)="getClick('gen7')">Generation 7</button>
+    <button (click)="getClick('gen8')">Generation 8</button>
+    <button (click)="getClick('gen9')">Generation 9</button>
+  </div>
+  <article>
+    <ul *ngFor="let pokemon of pokemons">
+<!--      <li>{{pokemon.id}}</li>-->
+<!--      <span >{{pokemon.name}}</span>-->
+
+      <span *ngIf="pokemon">{{pokemon.id}} {{pokemon.name}}</span>
+<!--      <span *ngIf="!pokemon">Loading...</span>-->
+    </ul >
+
+  </article>
+
+
 </section>

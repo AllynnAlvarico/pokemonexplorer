@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {DataService} from "../../service/data.service";
-import {response} from "express";
 
 @Component({
   selector: 'app-card',
@@ -15,16 +14,18 @@ export class CardComponent implements OnInit{
   ) {
   }
   ngOnInit() {
-    this.dataService.getPokemons()
-      .subscribe((response: any) => {
-        console.log(response);
-        response.results.forEach((result: any) => {
-          this.dataService.getPokemonDetails(result.name)
-            .subscribe((uniqueResponse: any) => {
-              this.pokemons.push(uniqueResponse);
-              console.log(uniqueResponse.name);
-            });
-        });
-    });
+    // this.dataService.getPokemons()
+    //   .subscribe((response: any) => {
+    //     // console.log(response);
+    //
+    //     response.results.forEach((result: any) => {
+    //       this.dataService.getPokemonDetails(result.name)
+    //         .subscribe((uniqueResponse: any) => {
+    //           this.pokemons.push(uniqueResponse);
+    //           console.log(uniqueResponse.name);
+    //           // console.log(uniqueResponse);
+    //         });
+    //     });
+    // });
   }
 }
