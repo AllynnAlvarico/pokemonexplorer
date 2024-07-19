@@ -1,6 +1,7 @@
-<div class="card">
+<div *ngFor="let pokemon of pokemons" class="card">
   <div class="card-image"></div>
-  <p class="card-title">Card title</p>
+<!--  <img [src]="pokemon.sprit">-->
+  <p class="card-title">{{pokemon.name}}</p>
   <p class="card-body">
     Nullam ac tristique nulla, at convallis quam. Integer consectetur mi nec magna tristique, non lobortis.
   </p>
