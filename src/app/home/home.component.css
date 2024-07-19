@@ -7,7 +7,7 @@ h1 {
   @apply py-20;
   /*this is for the text display*/
   @apply font-extrabold tracking-widest text-7xl text-center;
-
+  /*this is the setting if you want gradient color for your text*/
   background: linear-gradient(45deg, blue, red);
   background-clip: text;
   color: transparent;
