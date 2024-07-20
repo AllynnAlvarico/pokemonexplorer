@@ -1,5 +1,6 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {DataService} from "../../service/data.service";
+import {Pokemon} from "pokenode-ts";
 
 @Component({
   selector: 'app-card',
@@ -7,25 +8,10 @@ import {DataService} from "../../service/data.service";
   styleUrl: './card.component.css'
 })
 export class CardComponent implements OnInit{
-  pokemons: any[] = [];
+  @Input() pokemons: Pokemon[] = [];
   name: string = '';
-  constructor(
-    private dataService: DataService
-  ) {
+  constructor() {
   }
   ngOnInit() {
-    // this.dataService.getPokemons()
-    //   .subscribe((response: any) => {
-    //     // console.log(response);
-    //
-    //     response.results.forEach((result: any) => {
-    //       this.dataService.getPokemonDetails(result.name)
-    //         .subscribe((uniqueResponse: any) => {
-    //           this.pokemons.push(uniqueResponse);
-    //           console.log(uniqueResponse.name);
-    //           // console.log(uniqueResponse);
-    //         });
-    //     });
-    // });
   }
 }

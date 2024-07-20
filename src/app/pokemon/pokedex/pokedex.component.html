@@ -13,14 +13,7 @@
     <button (click)="getClick('gen9')">Generation 9</button>
   </div>
   <article>
-    <ul *ngFor="let pokemon of pokemons">
-<!--      <li>{{pokemon.id}}</li>-->
-<!--      <span >{{pokemon.name}}</span>-->
-
-      <span *ngIf="pokemon">{{pokemon.id}} {{pokemon.name}}</span>
-<!--      <span *ngIf="!pokemon">Loading...</span>-->
-    </ul >
-
+    <app-card class="grid-template" [pokemons]="pokemons"></app-card>
   </article>
 
 

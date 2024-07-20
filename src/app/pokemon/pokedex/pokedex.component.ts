@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {DataService} from "../../service/data.service";
+import {Pokemon} from "pokenode-ts";
 
 @Component({
   selector: 'app-pokedex',
@@ -8,7 +9,7 @@ import {DataService} from "../../service/data.service";
 })
 export class PokedexComponent implements OnInit{
 
-  pokemons: any[] = [];
+  pokemons: Pokemon[] = [];
   totalPokemonRegion = 0;
   offset = 0;
   regionConfig: RegionConfigMap = {
@@ -39,14 +40,12 @@ export class PokedexComponent implements OnInit{
       this.totalPokemonRegion = region.totalPokemonRegion;
       this.offset = region.offset;
       this.getPokemonByRegion(this.totalPokemonRegion, this.offset);
-
     }
-    // console.log(`${buttonId} was clicked!`);
     console.log(this.pokemons.length);
   }
 
   getPokemonByRegion(limit: number, offset: number){
-    this.dataService.getpokemons(limit, offset)
+    this.dataService.getPokemons(limit, offset)
       .subscribe((response: any) => {
         response.results.forEach((dataObj: any) => {
           this.dataService.getPokemonDetails(dataObj.name)
@@ -56,9 +55,6 @@ export class PokedexComponent implements OnInit{
               } else {
                 console.error('Error: uniqueData is null');
               }
-
-              // console.log(uniqueData.id);
-              // console.log(uniqueData.name);
             });
         });
       });

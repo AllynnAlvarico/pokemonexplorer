@@ -1,6 +1,7 @@
 import {Injectable, OnInit} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
+import {Pokemon, PokemonClient} from "pokenode-ts";
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +16,7 @@ export class DataService implements OnInit{
   ngOnInit() {
     // console.log("hello");
   }
-  getpokemons(limit: number, offset: number): Observable<any>{
+  getPokemons(limit: number, offset: number): Observable<any>{
     return this.http.get(`${this.api}pokemon?limit=${limit}&offset=${offset}`);
   }
   getAllPokemons(){
