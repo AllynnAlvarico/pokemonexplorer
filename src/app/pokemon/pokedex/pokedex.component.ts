@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {DataService} from "../../service/data.service";
-import {Pokemon} from "pokenode-ts";
+import {Pokemon, PokemonSpecies} from "pokenode-ts";
 
 @Component({
   selector: 'app-pokedex',
@@ -8,8 +8,8 @@ import {Pokemon} from "pokenode-ts";
   styleUrl: './pokedex.component.css'
 })
 export class PokedexComponent implements OnInit{
-
   pokemons: Pokemon[] = [];
+  pokemonSpecies: PokemonSpecies[] = [];
   totalPokemonRegion = 0;
   offset = 0;
   regionConfig: RegionConfigMap = {
@@ -23,12 +23,15 @@ export class PokedexComponent implements OnInit{
     gen8: { totalPokemonRegion: 96, offset: 809 },
     gen9: { totalPokemonRegion: 120, offset: 905 }
   };
+
+
   constructor(
     private dataService: DataService
   ) {
 
   }
   ngOnInit() {
+    this.getClick('gen1');
   }
   getClick(buttonId: string){
     this.totalPokemonRegion = 0;
@@ -52,6 +55,9 @@ export class PokedexComponent implements OnInit{
             .subscribe((uniqueData: any) => {
               if(uniqueData) {
                 this.pokemons.push(uniqueData);
+                this.pokemonSpecies.push(uniqueData.species.url);
+                // console.log(uniqueData.species.url);
+                // console.log(this.pokemonSpecies.length + " the length of ps array");
               } else {
                 console.error('Error: uniqueData is null');
               }
@@ -60,6 +66,7 @@ export class PokedexComponent implements OnInit{
       });
   }
 }
+
 interface RegionConfig {
   totalPokemonRegion: number;
   offset: number;

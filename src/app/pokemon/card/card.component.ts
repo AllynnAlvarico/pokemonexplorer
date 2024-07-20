@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {DataService} from "../../service/data.service";
-import {Pokemon} from "pokenode-ts";
+import {Pokemon, PokemonSpecies} from "pokenode-ts";
+import {response} from "express";
 
 @Component({
   selector: 'app-card',
@@ -9,9 +10,16 @@ import {Pokemon} from "pokenode-ts";
 })
 export class CardComponent implements OnInit{
   @Input() pokemons: Pokemon[] = [];
-  name: string = '';
-  constructor() {
+  @Input() pokemonSpecies: any[] = [];
+  description: string = '';
+  constructor(
+    private data: DataService
+  ) {
   }
   ngOnInit() {
+    console.log("pokemon species " + this.pokemonSpecies.length);
+  }
+  getPokemonTypeClasses(type: any): string {
+    return type.type.name + " img-holder";
   }
 }

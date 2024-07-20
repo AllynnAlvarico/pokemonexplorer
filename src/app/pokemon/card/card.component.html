@@ -1,4 +1,11 @@
 <div class="card shadow" *ngFor="let pokemon of pokemons">
-  <h1>{{pokemon.id}}</h1>
-  <h1>{{pokemon.name}}</h1>
+  <div class="flex-row-even">
+    <h1>{{pokemon.id}}</h1>
+    <h1>{{pokemon.name | titlecase}}</h1>
+  </div>
+  <div [ngClass]="getPokemonTypeClasses(pokemon.types[0])">
+    <img src="{{pokemon.sprites.other?.['official-artwork']?.front_default}}" alt="{{pokemon.name}}"/>
+  </div>
+  <p></p>
+
 </div>

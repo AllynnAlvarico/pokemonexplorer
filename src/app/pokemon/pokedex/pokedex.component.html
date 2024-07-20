@@ -1,11 +1,16 @@
-<section class="flex flex-row justify-start">
+<section class="flex-col-even justify-center">
 <!--  class="flex-row-even flex-wrap mx-auto"-->
+<!--  this is the active class to make it do effects when clicked-->
+<!--  [class.active]="button"-->
+<!--  button:string = ''; on the component.ts
+      you need to make sure u assign an id in order to call it-->
+<!--  on the :focus if the button is clicked and the effect will remain until changed-->
+
   <div class="flex-row-even flex-wrap gap-1">
-    <button (click)="getClick('gen1')">Generation 1</button>
+    <button (click)="getClick('gen1')">Kanto</button>
     <button (click)="getClick('gen2')">Generation 2</button>
     <button (click)="getClick('gen3')">Generation 3</button>
     <button (click)="getClick('gen4')">Generation 4</button>
-<!--    <button (click)="getClick('hisui')">Hisui</button>-->
     <button (click)="getClick('gen5')">Generation 5</button>
     <button (click)="getClick('gen6')">Generation 6</button>
     <button (click)="getClick('gen7')">Generation 7</button>
@@ -13,8 +18,6 @@
     <button (click)="getClick('gen9')">Generation 9</button>
   </div>
   <article>
-    <app-card class="grid-template" [pokemons]="pokemons"></app-card>
+    <app-card class="grid-template" [pokemons]="pokemons" [pokemonSpecies]="pokemonSpecies"></app-card>
   </article>
-
-
 </section>

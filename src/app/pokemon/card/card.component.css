@@ -1,6 +1,6 @@
 .card {
   width: 200px;
-  height: 284px;
+  height: 324px;
   background: rgb(255, 255, 236);
   border-radius: 10px;
   transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -10,4 +10,31 @@
 .shadow {
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
-
+.img-holder {
+  /*background-color: #231f20;*/
+  width: 180px;
+  height: 180px;
+  @apply rounded-full mx-auto mt-5;
+}
+img {
+  width: 100%;
+  @apply mx-auto;
+}
+.normal {background-color: #A8A77A;}
+.fire {background-color: #EE8130;}
+.water {background-color: #6390F0;}
+.grass {background-color: seagreen;}
+.flying {background-color: #A98FF3;}
+.fighting {background-color: #C22E28;}
+.poison {background-color: #A33EA1;}
+.electric {background-color: #F7D02C;}
+.ground {background-color: #E2BF65;}
+.rock {background-color: #B6A136;}
+.psychic {background-color: #F95587;}
+.ice {background-color: #96D9D6;}
+.bug {background-color: #A6B91A;}
+.ghost {background-color: #735797;}
+.steel {background-color: #B7B7CE;}
+.dragon {background-color: #6F35FC;}
+.dark {background-color: #705746;}
+.fairy  {background-color: #D685AD;}
