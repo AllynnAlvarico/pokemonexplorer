@@ -1,11 +1,21 @@
 <div class="card shadow" *ngFor="let pokemon of pokemons">
   <div class="flex-row-even">
-    <h1>{{pokemon.id}}</h1>
+    <h1>ID: {{pokemon.id}}</h1>
     <h1>{{pokemon.name | titlecase}}</h1>
   </div>
   <div [ngClass]="getPokemonTypeClasses(pokemon.types[0])">
     <img src="{{pokemon.sprites.other?.['official-artwork']?.front_default}}" alt="{{pokemon.name}}"/>
   </div>
-  <p></p>
+  <div class="flex flex-row justify-center gap-3 mt-5">
+    <h1><b>Type</b></h1>
+    <h1>{{pokemon.types[0].type.name | titlecase}}</h1>
+    <b *ngIf="pokemon.types.length > 1">/</b>
+    <h1 *ngIf="pokemon.types.length > 1">{{pokemon.types[1].type.name | titlecase}}</h1>
+  </div>
+  <h1><b>Stats</b></h1>
+  <div class="flex-row-even">
+    <h1><b>Height: </b> {{pokemon.height}}</h1>
+    <h1><b>Weight: </b> {{pokemon.weight}}</h1>
 
+  </div>
 </div>
