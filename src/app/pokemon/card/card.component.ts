@@ -10,14 +10,14 @@ import {response} from "express";
 })
 export class CardComponent implements OnInit{
   @Input() pokemons: Pokemon[] = [];
-  @Input() pokemonSpecies: any[] = [];
+
+
   description: string = '';
   constructor(
     private data: DataService
   ) {
   }
   ngOnInit() {
-    console.log("pokemon species " + this.pokemonSpecies.length);
   }
   getPokemonTypeClasses(type: any): string {
     return type.type.name + " img-holder";

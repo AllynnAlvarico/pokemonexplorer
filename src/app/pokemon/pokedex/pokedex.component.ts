@@ -9,7 +9,7 @@ import {Pokemon, PokemonSpecies} from "pokenode-ts";
 })
 export class PokedexComponent implements OnInit{
   pokemons: Pokemon[] = [];
-  pokemonSpecies: PokemonSpecies[] = [];
+
   totalPokemonRegion = 0;
   offset = 0;
   regionConfig: RegionConfigMap = {
@@ -44,6 +44,7 @@ export class PokedexComponent implements OnInit{
       this.offset = region.offset;
       this.getPokemonByRegion(this.totalPokemonRegion, this.offset);
     }
+    this.sortPokemon();
     console.log(this.pokemons.length);
   }
 
@@ -55,15 +56,16 @@ export class PokedexComponent implements OnInit{
             .subscribe((uniqueData: any) => {
               if(uniqueData) {
                 this.pokemons.push(uniqueData);
-                this.pokemonSpecies.push(uniqueData.species.url);
-                // console.log(uniqueData.species.url);
-                // console.log(this.pokemonSpecies.length + " the length of ps array");
               } else {
                 console.error('Error: uniqueData is null');
               }
             });
         });
       });
+  }
+  sortPokemon(){
+    //this is how to sort the number by ascending the numbers
+    this.pokemons.sort((a, b) => a.id - b.id);
   }
 }
 

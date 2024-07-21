@@ -1,7 +1,7 @@
 <div class="card shadow" *ngFor="let pokemon of pokemons">
   <div class="flex-row-even">
-    <h1>ID: {{pokemon.id}}</h1>
-    <h1>{{pokemon.name | titlecase}}</h1>
+    <h1><b>ID: </b>#{{pokemon.id}}</h1>
+    <a target="_blank" href="https://pokemondb.net/pokedex/{{pokemon.name}}"><h1>{{pokemon.name | titlecase}}</h1></a>
   </div>
   <div [ngClass]="getPokemonTypeClasses(pokemon.types[0])">
     <img src="{{pokemon.sprites.other?.['official-artwork']?.front_default}}" alt="{{pokemon.name}}"/>
@@ -14,8 +14,7 @@
   </div>
   <h1><b>Stats</b></h1>
   <div class="flex-row-even">
-    <h1><b>Height: </b> {{pokemon.height}}</h1>
-    <h1><b>Weight: </b> {{pokemon.weight}}</h1>
-
+    <h1><b>Height: </b> {{pokemon.height/10}} m</h1>
+    <h1><b>Weight: </b> {{pokemon.weight/10}} kg</h1>
   </div>
 </div>
