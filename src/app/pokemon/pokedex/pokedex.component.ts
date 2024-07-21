@@ -9,6 +9,8 @@ import {Pokemon, PokemonSpecies} from "pokenode-ts";
 })
 export class PokedexComponent implements OnInit{
   pokemons: Pokemon[] = [];
+  sortedPokemons: Pokemon[] = [];
+
 
   totalPokemonRegion = 0;
   offset = 0;
@@ -32,6 +34,7 @@ export class PokedexComponent implements OnInit{
   }
   ngOnInit() {
     this.getClick('gen1');
+    // this.sortPokemon();
   }
   getClick(buttonId: string){
     this.totalPokemonRegion = 0;
@@ -43,6 +46,7 @@ export class PokedexComponent implements OnInit{
       this.totalPokemonRegion = region.totalPokemonRegion;
       this.offset = region.offset;
       this.getPokemonByRegion(this.totalPokemonRegion, this.offset);
+
     }
     this.sortPokemon();
     console.log(this.pokemons.length);
@@ -65,7 +69,10 @@ export class PokedexComponent implements OnInit{
   }
   sortPokemon(){
     //this is how to sort the number by ascending the numbers
-    this.pokemons.sort((a, b) => a.id - b.id);
+    this.sortedPokemons = this.pokemons.sort((a, b) => a.id - b.id);
+    this.sortedPokemons.forEach((data) => {
+      console.log(data.id);
+    })
   }
 }
 
