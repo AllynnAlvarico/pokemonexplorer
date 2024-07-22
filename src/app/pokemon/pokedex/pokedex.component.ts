@@ -9,7 +9,6 @@ import {Pokemon, PokemonSpecies} from "pokenode-ts";
 })
 export class PokedexComponent implements OnInit{
   pokemons: Pokemon[] = [];
-  sortedPokemons: Pokemon[] = [];
 
 
   totalPokemonRegion = 0;
@@ -34,22 +33,17 @@ export class PokedexComponent implements OnInit{
   }
   ngOnInit() {
     this.getClick('gen1');
-    // this.sortPokemon();
   }
   getClick(buttonId: string){
     this.totalPokemonRegion = 0;
     this.offset = 0;
     this.pokemons = [];
-    console.clear()
     const region = this.regionConfig[buttonId];
     if (region) {
       this.totalPokemonRegion = region.totalPokemonRegion;
       this.offset = region.offset;
       this.getPokemonByRegion(this.totalPokemonRegion, this.offset);
-
     }
-    this.sortPokemon();
-    console.log(this.pokemons.length);
   }
 
   getPokemonByRegion(limit: number, offset: number){
@@ -63,16 +57,22 @@ export class PokedexComponent implements OnInit{
               } else {
                 console.error('Error: uniqueData is null');
               }
+
             });
         });
+        this.sortPokemon();
+        this.pokemons.forEach((test:any)=>{
+          console.log(test.id);
+        })
       });
+
   }
   sortPokemon(){
     //this is how to sort the number by ascending the numbers
-    this.sortedPokemons = this.pokemons.sort((a, b) => a.id - b.id);
-    this.sortedPokemons.forEach((data) => {
-      console.log(data.id);
-    })
+    this.pokemons.sort((a, b) => a.id - b.id);
+    // this.sortedPokemons.forEach((data) => {
+    //   console.log(data.id + "this is sort method");
+    // })
   }
 }
 
