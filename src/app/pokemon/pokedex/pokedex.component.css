@@ -19,7 +19,6 @@ div {
   @apply m-5;
 }
 article {
-  /*width: 1440px;*/
   border: 2px solid lightgray;
   @apply ml-5 mr-5;
 }

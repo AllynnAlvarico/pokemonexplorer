@@ -61,9 +61,9 @@ export class PokedexComponent implements OnInit{
             });
         });
         this.sortPokemon();
-        this.pokemons.forEach((test:any)=>{
-          console.log(test.id);
-        })
+        // this.pokemons.forEach((test:any)=>{
+        //   console.log(test.id);
+        // })
       });
 
   }

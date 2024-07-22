@@ -16,6 +16,7 @@ import { Col4Component } from './footer/col-4/col-4.component';
 import { JournalComponent } from './about/journal/journal.component';
 import { PokedexComponent } from './pokemon/pokedex/pokedex.component';
 import { CardComponent } from './pokemon/card/card.component';
+import { PokeballMenuComponent } from './header/pokeball-menu/pokeball-menu.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { CardComponent } from './pokemon/card/card.component';
     JournalComponent,
     PokedexComponent,
     CardComponent,
+    PokeballMenuComponent,
   ],
   imports: [
     BrowserModule,
