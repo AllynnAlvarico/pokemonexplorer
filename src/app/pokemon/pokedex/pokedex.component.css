@@ -1,9 +1,20 @@
 button {
   width: 100px;
   height: 50px;
-  @apply bg-blue-500 text-white rounded-2xl my-2 mx-5 font-light;
+  @apply border-2 rounded-2xl my-2 mx-5 font-light;
+}
+button:hover {
+  /*change the color of the buttons*/
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2),
+-10px -10px 10px white;
+}
+button:focus {
+  background-color: #35bdcc;
+  @apply font-medium;
+  @apply animate-pulse;
 }
 div {
+  background-color: #f9f9f9;
   border: 2px solid lightgray;
   @apply m-5;
 }
@@ -20,8 +31,4 @@ article {
   @apply mx-auto text-center ;
 }
 
-button:focus {
-  background-color: #35bdcc;
-  @apply font-medium;
-  @apply animate-pulse;
-}
+
