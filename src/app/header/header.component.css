@@ -1,0 +1,10 @@
+header {
+  @apply h-16 bg-green-700;
+  /*@apply mobile:-ml-32 h-8;*/
+}
+h1 {
+  @apply text-center uppercase text-white text-3xl font-bold tracking-widest py-4;
+  /*@apply*/
+  /*mobile:font-bold*/
+  /*mobile:text-xs;*/
+}

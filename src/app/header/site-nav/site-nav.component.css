@@ -1,7 +1,35 @@
+/*div {*/
+/*  !*display: block;*!*/
+/*  @apply grid place-content-end py-2.5 bg-green-700;*/
+/*}*/
+/*.stripe-menu {*/
+/*  @apply w-8 h-1 bg-white rounded-full;*/
+/*  @apply*/
+/*  before:content-['']*/
+/*  before:absolute*/
+/*  before:w-8*/
+/*  before:h-1*/
+/*  before:bg-white*/
+/*  before:rounded-full*/
+/*  before:-translate-y-2*/
+/*  before:-translate-x-4;*/
+/*  @apply*/
+/*  after:content-['']*/
+/*  after:absolute*/
+/*  after:w-8*/
+/*  after:h-1*/
+/*  after:bg-white*/
+/*  after:rounded-full*/
+/*  after:translate-y-1*/
+/*  after:-translate-x-4;*/
+/*  @apply z-50*/
+/*}*/
+
 ul {
   @apply flex flex-row justify-evenly;
   @apply bg-green-700 text-white;
   @apply font-bold tracking-widest;
+  /*@apply mobile:hidden*/
 }
 li {
   margin-bottom: 10px;

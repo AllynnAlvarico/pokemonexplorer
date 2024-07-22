@@ -48,6 +48,10 @@ module.exports = {
         faderightfast: 'fade-in-right 0.8s ease-in-out 0.1 1',
       }
     },
+    screens: {
+      'mobile': {'min': '360px', 'max': '414px'},
+      'tablet': {'min': '601px', 'max': '1280px'}
+    }
   },
   plugins: [],
 }
