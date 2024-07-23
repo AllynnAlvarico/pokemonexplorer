@@ -1,6 +1,3 @@
-/*.container {*/
-/*  @apply flex flex-row justify-end;*/
-/*}*/
 /*.pokeball {*/
 /*  width: 100px;*/
 /*  height: 100px;*/
@@ -32,78 +29,21 @@
 /*  border-radius: 50%;*/
 /*  border: 4px solid black;*/
 /*}*/
-/*.pokeball:hover .top {*/
-/*  animation: tracking-out-contract-bck-top 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both,*/
-/*  scale-out-top 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;*/
-/*  !*slide-out-bck-top 0.5s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;*!*/
+/*.out-of-sight {*/
+/*  animation: pokeball-rotation-menu 1s ease-out;*/
 /*}*/
-/*.pokeball:hover .bottom {*/
-/*  animation: tracking-out-contract-bck-bottom 0.8s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;*/
-/*}*/
-/*.pokeball:hover .center {*/
-/*  animation: tracking-out-contract-bck-top 0.8s cubic-bezier(0.550, 0.085, 0.680, 0.530) both,*/
-/*  scale-out-top 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;*/
-/*}*/
-/*@keyframes tracking-out-contract-bck-top {*/
+/*@keyframes pokeball-rotation-menu {*/
 /*  0% {*/
-/*    !*-webkit-transform: translateZ(0) translateY(0);*!*/
-/*    transform: translateZ(0) translateY(0);*/
+/*    -webkit-transform: rotate(0);*/
+/*    transform: scale(1) rotate(0);*/
 /*    opacity: 1;*/
-/*  }*/
-/*  60% {*/
-/*    opacity: 1;*/
+/*    visibility: visible;*/
 /*  }*/
 /*  100% {*/
-/*    letter-spacing: -0.5em;*/
-/*    !*-webkit-transform: translateZ(-500px) translateY(-300px);*!*/
-/*    transform: translateZ(-500px) translateY(-300px);*/
+/*    -webkit-transform: rotate(360deg);*/
+/*    transform: scale(0) rotate(360deg);*/
 /*    opacity: 0;*/
-/*  }*/
-/*}*/
-/*@keyframes slide-out-bck-top {*/
-/*  0% {*/
-/*    !*-webkit-transform: translateZ(1) translateY(0);*!*/
-/*    transform: translateZ(1) translateY(0);*/
-/*    opacity: 1;*/
-/*  }*/
-/*  100% {*/
-/*    !*-webkit-transform: translateZ(-1100px) translateY(-1000px);*!*/
-/*    transform: translateZ(-1100px) translateY(-1000px);*/
-/*    opacity: 0;*/
-/*  }*/
-/*}*/
-/*@keyframes scale-out-top {*/
-/*  0% {*/
-/*    !*-webkit-transform: scale(1);*!*/
-/*    transform: scale(1);*/
-/*    -webkit-transform-origin: 50% 0%;*/
-/*    transform-origin: 50% 0%;*/
-/*    opacity: 1;*/
-/*  }*/
-/*  100% {*/
-/*    !*-webkit-transform: scale(0);*!*/
-/*    transform: scale(0);*/
-/*    -webkit-transform-origin: 50% 0%;*/
-/*    transform-origin: 50% 0%;*/
-/*    opacity: 1;*/
-/*  }*/
-/*}*/
-
-
-/*@keyframes tracking-out-contract-bck-bottom {*/
-/*  0% {*/
-/*    !*-webkit-transform: translateZ(0) translateY(0);*!*/
-/*    transform: translateZ(0) translateY(0);*/
-/*    opacity: 1;*/
-/*  }*/
-/*  60% {*/
-/*    opacity: 1;*/
-/*  }*/
-/*  100% {*/
-/*    letter-spacing: -0.5em;*/
-/*    !*-webkit-transform: translateZ(-500px) translateY(300px);*!*/
-/*    transform: translateZ(-500px) translateY(300px);*/
-/*    opacity: 0;*/
+/*    visibility: hidden;*/
 /*  }*/
 /*}*/
 
@@ -111,6 +51,68 @@
 
 
 
+/*!*@keyframes tracking-out-contract-bck-top {*!*/
+/*!*  0% {*!*/
+/*!*    !*-webkit-transform: translateZ(0) translateY(0);*!*!*/
+/*!*    transform: translateZ(0) translateY(0);*!*/
+/*!*    opacity: 1;*!*/
+/*!*  }*!*/
+/*!*  60% {*!*/
+/*!*    opacity: 1;*!*/
+/*!*  }*!*/
+/*!*  100% {*!*/
+/*!*    letter-spacing: -0.5em;*!*/
+/*!*    !*-webkit-transform: translateZ(-500px) translateY(-300px);*!*!*/
+/*!*    transform: translateZ(-500px) translateY(-300px);*!*/
+/*!*    opacity: 0;*!*/
+/*!*  }*!*/
+/*!*}*!*/
+/*!*@keyframes slide-out-bck-top {*!*/
+/*!*  0% {*!*/
+/*!*    !*-webkit-transform: translateZ(1) translateY(0);*!*!*/
+/*!*    transform: translateZ(1) translateY(0);*!*/
+/*!*    opacity: 1;*!*/
+/*!*  }*!*/
+/*!*  100% {*!*/
+/*!*    !*-webkit-transform: translateZ(-1100px) translateY(-1000px);*!*!*/
+/*!*    transform: translateZ(-1100px) translateY(-1000px);*!*/
+/*!*    opacity: 0;*!*/
+/*!*  }*!*/
+/*!*}*!*/
+/*!*@keyframes scale-out-top {*!*/
+/*!*  0% {*!*/
+/*!*    !*-webkit-transform: scale(1);*!*!*/
+/*!*    transform: scale(1);*!*/
+/*!*    -webkit-transform-origin: 50% 0%;*!*/
+/*!*    transform-origin: 50% 0%;*!*/
+/*!*    opacity: 1;*!*/
+/*!*  }*!*/
+/*!*  100% {*!*/
+/*!*    !*-webkit-transform: scale(0);*!*!*/
+/*!*    transform: scale(0);*!*/
+/*!*    -webkit-transform-origin: 50% 0%;*!*/
+/*!*    transform-origin: 50% 0%;*!*/
+/*!*    opacity: 1;*!*/
+/*!*  }*!*/
+/*!*}*!*/
+
+
+/*!*@keyframes tracking-out-contract-bck-bottom {*!*/
+/*!*  0% {*!*/
+/*!*    !*-webkit-transform: translateZ(0) translateY(0);*!*!*/
+/*!*    transform: translateZ(0) translateY(0);*!*/
+/*!*    opacity: 1;*!*/
+/*!*  }*!*/
+/*!*  60% {*!*/
+/*!*    opacity: 1;*!*/
+/*!*  }*!*/
+/*!*  100% {*!*/
+/*!*    letter-spacing: -0.5em;*!*/
+/*!*    !*-webkit-transform: translateZ(-500px) translateY(300px);*!*!*/
+/*!*    transform: translateZ(-500px) translateY(300px);*!*/
+/*!*    opacity: 0;*!*/
+/*!*  }*!*/
+/*!*}*!*/
 
 
 
@@ -118,92 +120,97 @@
 
 
 
-/*!*!*.container {*!*!*/
-/*!*!*  position: relative;*!*!*/
-/*!*!*  width: 100px;*!*!*/
-/*!*!*  height: 100px;*!*!*/
-/*!*!*  cursor: pointer;*!*!*/
-/*!*!*  !*z-index: 50;*!*!*!*/
-/*!*!*}*!*!*/
 
-/*!*!*.pokeball {*!*!*/
-/*!*!*  position: absolute;*!*!*/
-/*!*!*  width: 100px;*!*!*/
-/*!*!*  height: 100px;*!*!*/
-/*!*!*  border: 5px solid #3e3a60;*!*!*/
-/*!*!*  clip-path: circle();*!*!*/
-/*!*!*  border-radius: 50%;*!*!*/
-/*!*!*  !*animation: openPokeball 2s forwards;*!*!*!*/
-/*!*!*}*!*!*/
 
-/*!*!*.pokeball .top{*!*!*/
-/*!*!*  !*.pokeball .bottom*!*!*!*/
-/*!*!*  position: absolute;*!*!*/
-/*!*!*  width: 100%;*!*!*/
-/*!*!*  height: 50%;*!*!*/
-/*!*!*  background-color: red;*!*!*/
-/*!*!*}*!*!*/
 
-/*!*!*.pokeball .bottom {*!*!*/
-/*!*!*  !*background-color: white;*!*!*!*/
-/*!*!*  !*top: 50%;*!*!*!*/
-/*!*!*}*!*!*/
 
-/*!*!*.pokeball .center {*!*!*/
-/*!*!*  !*position: absolute;*!*!*!*/
-/*!*!*  !*top: 45%;*!*!*!*/
-/*!*!*  !*left: 45%;*!*!*!*/
-/*!*!*  !*width: 20%;*!*!*!*/
-/*!*!*  !*height: 20%;*!*!*!*/
-/*!*!*  !*background-color: white;*!*!*!*/
-/*!*!*  !*border: 5px solid #3e3a60;*!*!*!*/
-/*!*!*  !*border-radius: 50%;*!*!*!*/
-/*!*!*}*!*!*/
 
-/*!*!*.menu {*!*!*/
-/*!*!*  !*display: none;*!*!*!*/
-/*!*!*  !*position: absolute;*!*!*!*/
-/*!*!*  !*top: 50%;*!*!*!*/
-/*!*!*  !*left: 50%;*!*!*!*/
-/*!*!*  !*transform: translate(-50%, -50%);*!*!*!*/
-/*!*!*  !*animation: showMenu 2s forwards;*!*!*!*/
-/*!*!*}*!*!*/
+/*!*.container {*!*/
+/*!*  position: relative;*!*/
+/*!*  width: 100px;*!*/
+/*!*  height: 100px;*!*/
+/*!*  cursor: pointer;*!*/
+/*  !*z-index: 50;*!*/
+/*!*}*!*/
 
-/*!*!*.menu .bar1, .menu .bar2, .menu .bar3 {*!*!*/
-/*!*!*  !*width: 35px;*!*!*!*/
-/*!*!*  !*height: 5px;*!*!*!*/
-/*!*!*  !*background-color: #3e3a60;*!*!*!*/
-/*!*!*  !*margin: 6px 0;*!*!*!*/
-/*!*!*}*!*!*/
+/*!*.pokeball {*!*/
+/*!*  position: absolute;*!*/
+/*!*  width: 100px;*!*/
+/*!*  height: 100px;*!*/
+/*!*  border: 5px solid #3e3a60;*!*/
+/*!*  clip-path: circle();*!*/
+/*!*  border-radius: 50%;*!*/
+/*  !*animation: openPokeball 2s forwards;*!*/
+/*!*}*!*/
 
-/*!*!*.hidden {*!*!*/
-/*!*!*  display: none;*!*!*/
-/*!*!*}*!*!*/
+/*!*.pokeball .top{*!*/
+/*  !*.pokeball .bottom*!*/
+/*!*  position: absolute;*!*/
+/*!*  width: 100%;*!*/
+/*!*  height: 50%;*!*/
+/*!*  background-color: red;*!*/
+/*!*}*!*/
 
-/*!*!*.visible {*!*!*/
-/*!*!*  display: block;*!*!*/
-/*!*!*  opacity: 1;*!*!*/
-/*!*!*}*!*!*/
+/*!*.pokeball .bottom {*!*/
+/*  !*background-color: white;*!*/
+/*  !*top: 50%;*!*/
+/*!*}*!*/
 
-/*!*!*!*@keyframes openPokeball {*!*!*!*/
-/*!*!*!*  0% {*!*!*!*/
-/*!*!*!*    transform: scale(1);*!*!*!*/
-/*!*!*!*  }*!*!*!*/
-/*!*!*!*  50% {*!*!*!*/
-/*!*!*!*    transform: scale(1.1);*!*!*!*/
-/*!*!*!*  }*!*!*!*/
-/*!*!*!*  100% {*!*!*!*/
-/*!*!*!*    transform: scale(0);*!*!*!*/
-/*!*!*!*    display: none;*!*!*!*/
-/*!*!*!*  }*!*!*!*/
-/*!*!*!*}*!*!*!*/
+/*.pokeball .center {*/
+/*  !*position: absolute;*!*/
+/*  !*top: 45%;*!*/
+/*  !*left: 45%;*!*/
+/*  !*width: 20%;*!*/
+/*  !*height: 20%;*!*/
+/*  !*background-color: white;*!*/
+/*  !*border: 5px solid #3e3a60;*!*/
+/*  !*border-radius: 50%;*!*/
+/*}*/
 
-/*!*!*!*@keyframes showMenu {*!*!*!*/
-/*!*!*!*  0% {*!*!*!*/
-/*!*!*!*    opacity: 0;*!*!*!*/
-/*!*!*!*  }*!*!*!*/
-/*!*!*!*  100% {*!*!*!*/
-/*!*!*!*    opacity: 1;*!*!*!*/
-/*!*!*!*    display: block;*!*!*!*/
-/*!*!*!*  }*!*!*!*/
-/*!*!*!*}*!*!*!*/
+/*.menu {*/
+/*  !*display: none;*!*/
+/*  !*position: absolute;*!*/
+/*  !*top: 50%;*!*/
+/*  !*left: 50%;*!*/
+/*  !*transform: translate(-50%, -50%);*!*/
+/*  !*animation: showMenu 2s forwards;*!*/
+/*}*/
+
+/*.menu .bar1, .menu .bar2, .menu .bar3 {*/
+/*  !*width: 35px;*!*/
+/*  !*height: 5px;*!*/
+/*  !*background-color: #3e3a60;*!*/
+/*  !*margin: 6px 0;*!*/
+/*}*/
+
+/*!*.hidden {*!*/
+/*!*  display: none;*!*/
+/*!*}*!*/
+
+/*!*.visible {*!*/
+/*!*  display: block;*!*/
+/*!*  opacity: 1;*!*/
+/*!*}*!*/
+
+/*!*@keyframes openPokeball {*!*/
+/*!*  0% {*!*/
+/*!*    transform: scale(1);*!*/
+/*!*  }*!*/
+/*!*  50% {*!*/
+/*!*    transform: scale(1.1);*!*/
+/*!*  }*!*/
+/*!*  100% {*!*/
+/*!*    transform: scale(0);*!*/
+/*!*    display: none;*!*/
+/*!*  }*!*/
+/*!*}*!*/
+
+/*!*@keyframes showMenu {*!*/
+/*!*  0% {*!*/
+/*!*    opacity: 0;*!*/
+/*!*  }*!*/
+/*!*  100% {*!*/
+/*!*    opacity: 1;*!*/
+/*!*    display: block;*!*/
+/*!*  }*!*/
+/*!*}*!*/
