@@ -13,10 +13,10 @@ import { Col1Component } from './footer/col-1/col-1.component';
 import { Col2Component } from './footer/col-2/col-2.component';
 import { Col3Component } from './footer/col-3/col-3.component';
 import { Col4Component } from './footer/col-4/col-4.component';
-import { JournalComponent } from './about/journal/journal.component';
 import { PokedexComponent } from './pokemon/pokedex/pokedex.component';
 import { CardComponent } from './pokemon/card/card.component';
 import { PokeballMenuComponent } from './header/pokeball-menu/pokeball-menu.component';
+import { DevelopmentComponent } from './development/development.component';
 
 @NgModule({
   declarations: [
@@ -30,10 +30,10 @@ import { PokeballMenuComponent } from './header/pokeball-menu/pokeball-menu.comp
     Col2Component,
     Col3Component,
     Col4Component,
-    JournalComponent,
     PokedexComponent,
     CardComponent,
     PokeballMenuComponent,
+    DevelopmentComponent,
   ],
   imports: [
     BrowserModule,
