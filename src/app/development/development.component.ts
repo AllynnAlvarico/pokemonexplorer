@@ -6,5 +6,4 @@ import { Component } from '@angular/core';
   styleUrl: './development.component.css'
 })
 export class DevelopmentComponent {
-
 }
