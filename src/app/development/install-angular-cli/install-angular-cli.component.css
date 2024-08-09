@@ -1,6 +1,14 @@
-section p{
+section{
   @apply mx-11 my-5;
 }
-ol {
+ol li{
   list-style: decimal inside;
+  @apply mx-5 my-5;
+}
+.code-block {
+  @apply mx-32 my-5;
+}
+ul li{
+  list-style: circle;
+  @apply mx-11;
 }
