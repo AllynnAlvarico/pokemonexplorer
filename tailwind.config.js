@@ -46,7 +46,11 @@ module.exports = {
         jiggle: 'jiggle 1s ease-in-out 10s 3',
         fadeinright: 'fade-in-right 3s ease-in-out 0.25s 1',
         faderightfast: 'fade-in-right 0.8s ease-in-out 0.1 1',
-      }
+      },
+      colors: {
+        'oil': '#1E1E1E',
+        'gravel': '#444',
+      },
     },
     screens: {
       'mobile': {'min': '360px', 'max': '414px'},

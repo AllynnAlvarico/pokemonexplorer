@@ -10,5 +10,36 @@
   .flex-col-even {
     @apply flex flex-col justify-evenly;
   }
+  .code-block {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    @apply pb-5;
+    @apply bg-oil;
+    @apply rounded-xl relative overflow-hidden;
+  }
+  .code-header {
+    border-bottom: 1px solid #444;
+    @apply bg-gray-600 text-white;
+    @apply flex justify-between items-center;
+    @apply py-2 px-3;
+  }
+  .copy-button {
+    @apply p-0 text-xs;
+    @apply cursor-pointer;
+    background: none;
+    border: none;
+    color: #888;
+  }
+
+  .copy-button:hover {
+    color: #bbb;
+  }
+  pre {
+    @apply mt-3 ml-9 text-white;
+  }
+  .language-bash {
+    @apply text-amber-300;
+  }
 }
+
+
 

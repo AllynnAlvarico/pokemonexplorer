@@ -17,6 +17,9 @@ import { PokedexComponent } from './pokemon/pokedex/pokedex.component';
 import { CardComponent } from './pokemon/card/card.component';
 import { PokeballMenuComponent } from './header/pokeball-menu/pokeball-menu.component';
 import { DevelopmentComponent } from './development/development.component';
+import { IntroductionComponent } from './development/introduction/introduction.component';
+import { SetUpNodeJSComponent } from './development/set-up-node-js/set-up-node-js.component';
+import { InstallAngularCLIComponent } from './development/install-angular-cli/install-angular-cli.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +37,9 @@ import { DevelopmentComponent } from './development/development.component';
     CardComponent,
     PokeballMenuComponent,
     DevelopmentComponent,
+    IntroductionComponent,
+    SetUpNodeJSComponent,
+    InstallAngularCLIComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,22 @@
+section {
+  @apply mx-11 my-5;
+}
+ol li {
+  list-style: decimal inside;
+  @apply mx-5 my-5;
+  @apply font-bold;
+}
+ul li {
+  list-style: circle inside;
+  @apply mx-11;
+  @apply font-normal;
+}
+a {
+  @apply text-teal-500;
+  @apply hover:text-teal-400 hover:underline;
+  @apply active:text-blue-400;
+}
+.code-block {
+  @apply mx-36 my-5;
+}
+
