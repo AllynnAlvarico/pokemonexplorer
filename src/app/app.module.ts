@@ -20,6 +20,7 @@ import { DevelopmentComponent } from './development/development.component';
 import { IntroductionComponent } from './development/introduction/introduction.component';
 import { SetUpNodeJSComponent } from './development/set-up-node-js/set-up-node-js.component';
 import { InstallAngularCLIComponent } from './development/install-angular-cli/install-angular-cli.component';
+import { CreateAngularProjectComponent } from './development/create-angular-project/create-angular-project.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { InstallAngularCLIComponent } from './development/install-angular-cli/in
     IntroductionComponent,
     SetUpNodeJSComponent,
     InstallAngularCLIComponent,
+    CreateAngularProjectComponent,
   ],
   imports: [
     BrowserModule,

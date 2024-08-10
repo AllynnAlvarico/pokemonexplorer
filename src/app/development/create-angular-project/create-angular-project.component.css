@@ -14,7 +14,16 @@ ul li{
 em {
   @apply font-medium;
 }
+ul b {
+  margin: 0 50%;
+}
 .code-block {
   @apply mx-32 my-5;
   @apply font-normal;
+}
+.congrats {
+  @apply text-center text-3xl my-5 font-bold;
+  background: linear-gradient(45deg, rebeccapurple, blue);
+  background-clip: text;
+  color: transparent;
 }
