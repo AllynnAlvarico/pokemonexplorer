@@ -7,10 +7,12 @@ import { Router } from "@angular/router";
   styleUrl: './development.component.css'
 })
 export class DevelopmentComponent {
+
   constructor(private router: Router) {
   }
+
   goToPart(fragment:any){
     this.router.navigateByUrl('development#' + fragment);
   }
-
 }
+

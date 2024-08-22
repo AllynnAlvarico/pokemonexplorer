@@ -10,9 +10,12 @@
         <li>
           <p class="block px-2 py-1 rounded">Setting Development Environment</p>
           <ul class="mt-2 list-disc px-2 pl-6">
-            <button class="block hover:bg-gray-200 px-2 py-1 rounded" (click)="goToPart('installingNode')">Installing Node.js and npm</button>
-            <button class="block hover:bg-gray-200 px-2 py-1 rounded" (click)="goToPart('angularcli')">Installing Angular CLI</button>
-            <button class="block hover:bg-gray-200 px-2 py-1 rounded" (click)="goToPart('createProject')">Create Project</button>
+            <li><button class="block hover:bg-gray-200 px-2 py-1 rounded" (click)="goToPart('installingNode')">Installing Node.js and npm</button></li>
+            <li><button class="block hover:bg-gray-200 px-2 py-1 rounded" (click)="goToPart('angularcli')">Installing Angular CLI</button></li>
+            <li><button class="block hover:bg-gray-200 px-2 py-1 rounded" (click)="goToPart('createProject')">Create Project</button></li>
+          </ul>
+          <ul class="mt-2 list-disc px-2 pl-6">
+            <li><button class="block hover:bg-gray-200 px-2 py-1 rounded">Installing Tailwind CSS</button></li>
           </ul>
         </li>
       </ul>
@@ -29,4 +32,5 @@
   </div>
   <div class="h-80 border-sky-500">
   </div>
+<!--  <button id="myBtn" title="Go to top">Top</button>-->
 </section>
