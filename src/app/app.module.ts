@@ -21,6 +21,7 @@ import { IntroductionComponent } from './development/introduction/introduction.c
 import { SetUpNodeJSComponent } from './development/set-up-node-js/set-up-node-js.component';
 import { InstallAngularCLIComponent } from './development/install-angular-cli/install-angular-cli.component';
 import { CreateAngularProjectComponent } from './development/create-angular-project/create-angular-project.component';
+import { TableContentsComponent } from './development/table-contents/table-contents.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { CreateAngularProjectComponent } from './development/create-angular-proj
     SetUpNodeJSComponent,
     InstallAngularCLIComponent,
     CreateAngularProjectComponent,
+    TableContentsComponent,
   ],
   imports: [
     BrowserModule,
