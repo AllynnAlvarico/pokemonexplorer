@@ -1,7 +1,22 @@
 <meta name="keywords" content="Pokemons Angular, PokeApi, Typescript">
 <section class="flex-row-even">
   <div>
-    <app-table-contents></app-table-contents>
+    <div class="w-full border-4  px-4 py-3 text-left text-gray-800 break-words max-w-md rounded">
+      <div class="mx-auto text-xl font-semibold"><strong>Table of content</strong></div>
+      <ul class="mt-2 list-disc px-2 pl-6">
+        <li>
+          <button class="block hover:bg-gray-200 px-2 py-1 rounded" (click)="goToPart('introduction')">Introduction</button>
+        </li>
+        <li>
+          <p class="block px-2 py-1 rounded">Setting Development Environment</p>
+          <ul class="mt-2 list-disc px-2 pl-6">
+            <button class="block hover:bg-gray-200 px-2 py-1 rounded" (click)="goToPart('installingNode')">Installing Node.js and npm</button>
+            <button class="block hover:bg-gray-200 px-2 py-1 rounded" (click)="goToPart('angularcli')">Installing Angular CLI</button>
+            <button class="block hover:bg-gray-200 px-2 py-1 rounded" (click)="goToPart('createProject')">Create Project</button>
+          </ul>
+        </li>
+      </ul>
+    </div>
     <app-introduction id="introduction"></app-introduction>
     <ol class="installations">
       <li id="installingNode">Installing Node.js and npm</li>
@@ -13,6 +28,5 @@
     </ol>
   </div>
   <div class="h-80 border-sky-500">
-    fds
   </div>
 </section>
