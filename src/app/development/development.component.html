@@ -5,19 +5,21 @@
       <div class="mx-auto text-xl font-semibold"><strong>Table of content</strong></div>
       <ul class="mt-2 list-disc px-2 pl-6">
         <li>
-          <button class="block hover:bg-gray-200 px-2 py-1 rounded" (click)="goToPart('introduction')">Introduction</button>
+          <button (click)="goToPart('introduction')">Introduction</button>
         </li>
         <li>
           <p class="block px-2 py-1 rounded">Setting Development Environment</p>
           <ul class="mt-2 list-disc px-2 pl-6">
-            <li><button class="block hover:bg-gray-200 px-2 py-1 rounded" (click)="goToPart('installingNode')">Installing Node.js and npm</button></li>
-            <li><button class="block hover:bg-gray-200 px-2 py-1 rounded" (click)="goToPart('angularcli')">Installing Angular CLI</button></li>
-            <li><button class="block hover:bg-gray-200 px-2 py-1 rounded" (click)="goToPart('createProject')">Create Project</button></li>
-          </ul>
-          <ul class="mt-2 list-disc px-2 pl-6">
-            <li><button class="block hover:bg-gray-200 px-2 py-1 rounded">Installing Tailwind CSS</button></li>
+            <li><button (click)="goToPart('installingNode')">Installing Node.js and npm</button></li>
+            <li><button (click)="goToPart('angularcli')">Installing Angular CLI</button></li>
+            <li><button (click)="goToPart('createProject')">Create Project</button></li>
           </ul>
         </li>
+        <li>
+          <p>Setting Up Tailwind</p>
+          <ul class="mt-2 list-disc px-2 pl-6">
+          <li><button>Installing Tailwind CSS</button></li>
+        </ul></li>
       </ul>
     </div>
     <app-introduction id="introduction"></app-introduction>
@@ -29,8 +31,9 @@
       <li id="createProject">Creating a New Angular Project</li>
       <app-create-angular-project></app-create-angular-project>
     </ol>
+    <ol class="installations">
+      <li id="installTailwind">Installing Tailwind CSS in Your Angular Project</li>
+      <app-set-up-tailwind></app-set-up-tailwind>
+    </ol>
   </div>
-  <div class="h-80 border-sky-500">
-  </div>
-<!--  <button id="myBtn" title="Go to top">Top</button>-->
 </section>

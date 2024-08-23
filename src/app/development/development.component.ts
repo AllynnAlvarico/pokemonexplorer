@@ -14,5 +14,8 @@ export class DevelopmentComponent {
   goToPart(fragment:any){
     this.router.navigateByUrl('development#' + fragment);
   }
+
+
+
 }
 
